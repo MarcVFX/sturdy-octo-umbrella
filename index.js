@@ -13,13 +13,17 @@ client.on("message", (message) => {
 });
 
 client.on('message', (message) => {
+  var args = message.content.split(" ")
+  args.shift()
+ args.join(" ")
+  
   if (message.author.equals(client.user)) return;
   if (message.mentions.members.size !== 0){
      
  if(message.mentions.members.first().id == "466476840253521920"){
    
    
-   clbot.write(message.content, (response) => {
+   clbot.write(args.join(" "), (response) => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(response.output).catch(console.error);
