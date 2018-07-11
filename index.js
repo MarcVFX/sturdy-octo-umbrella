@@ -13,7 +13,7 @@ client.on("message", (message) => {
 });
 
 client.on('message', (message) => {
-  if (message.author.equals(bot.user)) return;
+  if (message.author.equals(client.user)) return;
   if (message.mentions.members.size !== 0){
      
  if(message.mentions.members.first().id == "466476840253521920"){
