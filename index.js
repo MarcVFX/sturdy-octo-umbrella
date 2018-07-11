@@ -14,14 +14,14 @@ client.on("message", (message) => {
 
 client.on('message', (message) => {
   var args = message.content.split(" ")
-  args.shift()
- args.join(" ")
+ 
   
   if (message.author.equals(client.user)) return;
   if (message.mentions.members.size !== 0){
      
  if(message.mentions.members.first().id == "466476840253521920"){
-   
+    args.shift()
+ args.join(" ")
    
    clbot.write(args.join(" "), (response) => {
       message.channel.startTyping();
