@@ -22,7 +22,7 @@ client.on('message', (message) => {
   if (message.mentions.members.size !== 0){
     if(message.content == "!instance"){
  cleverbot1 = new Cleverbot;
-        cleverbot1[message.author.id] = cleverbot;
+        cleverbot1[message.author.id] = clbot;
  }
      
  if(message.mentions.members.first().id == "466476840253521920"){
