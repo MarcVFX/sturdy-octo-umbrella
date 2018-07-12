@@ -26,7 +26,8 @@ client.on('message', (message) => {
     args.shift()
  args.join(" ")
  var message1 = args.join(" ")
- var url = `https://api.dialogflow.com/v1/query?v=20170712&query=${message1}!&lang=fr&sessionId=f93516c0-58f7-1286-f79b-afd71932b11b&timezone=America/Toronto`
+ var message2 = encodeURIComponent(args.join(" "))
+ var url = `https://api.dialogflow.com/v1/query?v=20170712&query=${message2}!&lang=fr&sessionId=f93516c0-58f7-1286-f79b-afd71932b11b&timezone=America/Toronto`
 snek.get(url,{headers:{"Authorization":"Bearer d7ea978ee0f54a64b25692ef39a3de6e"}}).then(function(response){message.reply(response.body.result.fulfillment.speech)})
  
   
