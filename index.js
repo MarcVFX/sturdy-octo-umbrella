@@ -22,14 +22,14 @@ client.on('message', (message) => {
   if (message.mentions.members.size !== 0){
     if(message.content == "!instance"){
  cleverbot1 = new Cleverbot;
-        cleverbot1[message.sender.id] = cleverbot;
+        cleverbot1[message.author.id] = cleverbot;
  }
      
  if(message.mentions.members.first().id == "466476840253521920"){
     args.shift()
  args.join(" ")
-   if (cleverbot1[message.sender.id]) {
-   cleverbot1[message.sender.id].write(args.join(" "), (response) => {
+   if (cleverbot1[message.author.id]) {
+   cleverbot1[message.author.id].write(args.join(" "), (response) => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(response.output).catch(console.error);
