@@ -42,7 +42,7 @@ snek.get(url,{headers:{"Authorization":"Bearer d7ea978ee0f54a64b25692ef39a3de6e"
  }
  else
  {
- message.reply(response.body.result.fulfillment.speech)})
+ message.reply(response.body.result.fulfillment.speech)
 }
   
  }
