@@ -32,7 +32,7 @@ client.on('message', (message) => {
         url,
         {headers:{"Authorization":"Bearer d7ea978ee0f54a64b25692ef39a3de6e"}})
         .then(response =>{
-        if(!response.body.result){
+        if(!response.body.result.fullfillment.speech){
             clbot.write(args.join(" "), (response) => {
                 message.channel.startTyping();
                 setTimeout(() => {
