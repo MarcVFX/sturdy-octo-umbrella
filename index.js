@@ -14,6 +14,7 @@ client.on("message", (message) => {
 });
 
 client.on('message', (message) => {
+ if (message.channel.type == "dm") return;
   var args = message.content.split(" ")
  
   
